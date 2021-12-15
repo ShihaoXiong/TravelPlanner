@@ -19,7 +19,11 @@ export default class Map extends Component {
 		loader.load().then(google => {
 			this.map = new google.maps.Map(this.mapRef.current, {
 				center: { lat: -34.397, lng: 150.644 },
-				zoom: 8
+				zoom: 8,
+				mapTypeControl: false,
+				streetViewControl: false,
+				zoomControl: false,
+				fullscreenControl: false
 			});
 		});
 	}

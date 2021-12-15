@@ -4,11 +4,16 @@
 
 .aside {
 	width: 25%;
+	min-width: 400px;
 	padding: 12px 15px;
 	margin: 20px;
 	border-radius: 10px;
-	background-color: #fff;
 	height: calc(100% - 40px);
 	position: absolute;
 	top: 0;
+	background-color: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(5px);
+	box-shadow: 2.6px 1.6px 9.6px rgba(0, 0, 0, 0.012), 6.2px 3.9px 18.3px rgba(0, 0, 0, 0.012),
+		11.6px 7.3px 28.1px rgba(0, 0, 0, 0.013), 20.8px 13px 41.2px rgba(0, 0, 0, 0.019),
+		38.9px 24.2px 62.4px rgba(0, 0, 0, 0.035), 93px 58px 123px rgba(0, 0, 0, 0.07);
 }
