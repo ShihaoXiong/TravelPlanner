@@ -1,10 +1,17 @@
 import '../style/App.css';
-import Map from './Map';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import Main from './Main';
 
 function App() {
 	return (
-		<div className='App'>
-			<Map />
+		<div className='app'>
+			<Router>
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route path='/main' component={Main} />
+				</Switch>
+			</Router>
 		</div>
 	);
 }
