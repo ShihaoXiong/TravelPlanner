@@ -6,7 +6,7 @@ const Main = () => {
 	return (
 		<main className='main'>
 			<Map />
-			<aside className='aside'></aside>
+			<aside className='aside'>Aside</aside>
 		</main>
 	);
 };
