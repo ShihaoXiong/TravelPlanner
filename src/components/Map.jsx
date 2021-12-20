@@ -18,8 +18,8 @@ export default class Map extends Component {
 	componentDidMount() {
 		loader.load().then(google => {
 			this.map = new google.maps.Map(this.mapRef.current, {
-				center: { lat: -34.397, lng: 150.644 },
-				zoom: 8,
+				center: { lat: 40.7127281, lng: -74.0060152 },
+				zoom: 10,
 				mapTypeControl: false,
 				streetViewControl: false,
 				zoomControl: false,
