@@ -1,48 +1,35 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Droppable } from 'react-beautiful-dnd';
 import Task from './ListAttraction';
+import '../style/Column.css';
 
-const Container = styled.div`
-  margin: 8px;
-  border: 1px solid lightgrey;
-  border-radius: 2px;
-  width: 220px;
-
-  display: flex;
-  flex-direction: column;
-`;
-const Title = styled.h3`
-  padding: 8px;
-`;
-const TaskList = styled.div`
-  padding: 8px;
-  transition: background-color 0.2s ease;
-  background-color: ${props => (props.isDraggingOver ? 'skyblue' : 'white')};
-  flex-grow: 1;
-  min-height: 100px;
-`;
+class TaskList extends React.Component {
+	render() {
+		const { children, innerRef, provided } = this.props;
+		return (
+			<div className='column__task-list' {...provided.draggableProps} {...provided.dragHandleProps} ref={innerRef}>
+				{children}
+			</div>
+		);
+	}
+}
 
 export default class Column extends React.Component {
-    render() {
-        return (
-            <Container>
-                <Title>{this.props.column.title}</Title>
-                <Droppable droppableId={this.props.column.id}>
-                    {(provided, snapshot) => (
-                        <TaskList
-                            innerRef={provided.innerRef}
-                            {...provided.droppableProps}
-                            isDraggingOver={snapshot.isDraggingOver}
-                        >
-                            {this.props.tasks.map((task, index) => (
-                                <Task key={task.id} task={task} index={index} />
-                            ))}
-                            {provided.placeholder}
-                        </TaskList>
-                    )}
-                </Droppable>
-            </Container>
-        );
-    }
+	render() {
+		return (
+			<div className='column__container'>
+				<h3 className='column__title'>{this.props.column.title}</h3>
+				<Droppable droppableId={this.props.column.id}>
+					{provided => (
+						<TaskList innerRef={provided.innerRef} provided={provided}>
+							{this.props.tasks.map((task, index) => (
+								<Task key={task.id} task={task} index={index} />
+							))}
+							{provided.placeholder}
+						</TaskList>
+					)}
+				</Droppable>
+			</div>
+		);
+	}
 }
