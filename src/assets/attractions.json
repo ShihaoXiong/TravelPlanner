@@ -1,0 +1,574 @@
+{
+	"html_attributions": [],
+	"next_page_token": "Aap_uEC9KI-yChk5-W1-TX4tmrSYkxIFfQaRDCAJCPWm8Eobpvve3yFskKiW6jhtLdx0ziCFZVt4oQ5xbUm6I4L2pXUpHcRYIhdKz6O384Lk57kkzrmM3PAe8OvZyQfeAOZJh5CshrzAwB_ZYv8I8wKc_dQoSx1HgQKeWYgc_DNEznBC_dLGTxwEafFBk8eVj5Wv2UnM3QxRSgeX2j6Dgudp_G2QIPEnXa2X0EFCLCV9BsTP4xO__DaZbw_SMwPpgXqlKyHWrIyMs5r_zRPOL-lpwPpn8c6B9vvHOg9kMMruns-PvlOcjTgS_oHYfbje0-r3kgoFP2AgxMOR951vHNOW2MloqiA323z6zwZzbjKa9nGwkXmWbOmo72mHhsDlPp6vRE5qmzR3mkwYWXqROfEP6_OBLPD9EfOXc7KkrJHnGCjqBiAkfupyHbRLd-TegqGqYm1AKKufeNUtH805ZFk",
+	"results": [
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "61-25 Stone St, New York, NY 10004",
+			"geometry": {
+				"location": { "lat": 40.7044752, "lng": -74.01026659999999 },
+				"viewport": {
+					"northeast": { "lat": 40.70595597989272, "lng": -74.00892197010728 },
+					"southwest": { "lat": 40.70325632010727, "lng": -74.01162162989272 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Stone street peatonal",
+			"photos": [
+				{
+					"height": 3024,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/109265965745190786492\"\u003eJulieta Arese\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEBXNyN7CRzLbStCMl7gk1OkAsqOLvLyHDNydznUZXWlTJvwRaitfR7PGn5uOde1JEdznOTjnPR3tKub7Bb0I409RdwJZB5OHTv9Tnnij-u_vZw2Z-Plj817iHwyNyiS9txqOdcVkYvXzP3D2-oEhTstxJxb0bYC6w8msbaFlKaaZFkw",
+					"width": 4032
+				}
+			],
+			"place_id": "ChIJ5QIbte9bwokRWYRp4rrpV0Y",
+			"plus_code": { "compound_code": "PX3Q+QV New York", "global_code": "87G7PX3Q+QV" },
+			"rating": 5,
+			"reference": "ChIJ5QIbte9bwokRWYRp4rrpV0Y",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 4
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "158 Worth St, New York, NY 10013",
+			"geometry": {
+				"location": { "lat": 40.7143388, "lng": -74.0004648 },
+				"viewport": {
+					"northeast": { "lat": 40.71568122989272, "lng": -73.99912142010727 },
+					"southwest": { "lat": 40.71298157010727, "lng": -74.00182107989271 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "The Five Points",
+			"photos": [
+				{
+					"height": 5504,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/113260771864529177421\"\u003eA Google User\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uECVjyaoJ5NX6fLRtzTPvnT1s3TZPrTGp9ojH2WpIvwjw6DvurcF58rC5KuYekmfxzNvigkSi34zNTEaiQ5Ec6iHUxXU9EKjSsakkt6fNmIPzB3EiqNrj3MtR3wGGXClovs-a4THgfGQ2HN0t3Zg5xmBdfrxv91D0Dwz6wb9MINNZvfZ",
+					"width": 8256
+				}
+			],
+			"place_id": "ChIJHcqByiZawokRzIdmxLc1Bhk",
+			"plus_code": { "compound_code": "PX7X+PR New York", "global_code": "87G7PX7X+PR" },
+			"rating": 4.3,
+			"reference": "ChIJHcqByiZawokRzIdmxLc1Bhk",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 138
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "2 Hammarskjold Plaza, 866 2nd Ave, New York, NY 10017",
+			"geometry": {
+				"location": { "lat": 40.752501, "lng": -73.96989259999999 },
+				"viewport": {
+					"northeast": { "lat": 40.75390652989272, "lng": -73.96867512010726 },
+					"southwest": { "lat": 40.75120687010727, "lng": -73.97137477989271 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Street Art by A CASA AO LADO - \" Vitral \"",
+			"photos": [
+				{
+					"height": 3456,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/107496520430630093922\"\u003eACASAAOLADO\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uECRGKlgr8F37_hr49yrZZ_nuBx82p6uTM_HhyeriXiZrOy0qj0ocl7OWOJVvSBsjR1SoXmH3vi0BunIlS7sgyGxAYJV-LzC37xei1lMkO3tnpQccW9SXiHz_sY5jLPq0yuU4cQ7poLoA5Ggz4NOnSbYVB74V_WDbOtsEMG7k7HOTqfw",
+					"width": 4608
+				}
+			],
+			"place_id": "ChIJXfWJMzlZwokRPi0TlXjhr3k",
+			"plus_code": { "compound_code": "Q23J+22 New York", "global_code": "87G8Q23J+22" },
+			"rating": 0,
+			"reference": "ChIJXfWJMzlZwokRPi0TlXjhr3k",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 0
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "126 Lafayette St, New York, NY 10013",
+			"geometry": {
+				"location": { "lat": 40.718839, "lng": -74.0003657 },
+				"viewport": {
+					"northeast": { "lat": 40.72015577989271, "lng": -73.99895232010729 },
+					"southwest": { "lat": 40.71745612010727, "lng": -74.00165197989273 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Mural Federico García Lorca",
+			"opening_hours": { "open_now": true },
+			"photos": [
+				{
+					"height": 3024,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/101173276975527991164\"\u003eRaúl García\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEBNRKfMx0SM_NHm0ccnVxYU4GxwshQrF37YME8w6kAIxErNImOtr7I-qqMWxjHRRyxidLOtt7SPcZSmiE_AAXFyk3TWe-_qIreSLN4BnRxDqXwaWOEK3P8IdWRIJMIY4Ne_Fx0141Ha0ZGoQQDXkPUpuEtRAO1xHIhg6otn-to_iYZ9",
+					"width": 4032
+				}
+			],
+			"place_id": "ChIJOTySiKNZwokRS0iWE7utlQ8",
+			"plus_code": { "compound_code": "PX9X+GV New York", "global_code": "87G7PX9X+GV" },
+			"rating": 5,
+			"reference": "ChIJOTySiKNZwokRS0iWE7utlQ8",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 1
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "Richmond County, Staten Island",
+			"geometry": {
+				"location": { "lat": 40.4961154, "lng": -74.24693809999999 },
+				"viewport": {
+					"northeast": { "lat": 40.49746522989272, "lng": -74.24558827010726 },
+					"southwest": { "lat": 40.49476557010728, "lng": -74.24828792989271 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "South Point of New York",
+			"photos": [
+				{
+					"height": 2268,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/111803772558285946868\"\u003eSantiago Camacho\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEBDUSFy0ndOY55Q18D3_RAN8ej5EcrxUJfb3Rf0ktsp9c8AjU29YzmR_gSHvmPlxx4gZiOMmR_5h_1d0SAE387StDvpS_qdBrqJrDoAVA3oL3xr63iJlYwwhA1vAmh2Bad2YvXU_bJrHuE0Oirdj3Co_dNe5WvzGKy1MUbx4ulc56pk",
+					"width": 4032
+				}
+			],
+			"place_id": "ChIJd8fHwoLLw4kR9yjZUM_mTTA",
+			"plus_code": { "compound_code": "FQW3+C6 New York", "global_code": "87G7FQW3+C6" },
+			"rating": 5,
+			"reference": "ChIJd8fHwoLLw4kR9yjZUM_mTTA",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 2
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "10 Hutchinson River Pkwy, Bronx, NY 10465",
+			"geometry": {
+				"location": { "lat": 40.81149550000001, "lng": -73.8377874 },
+				"viewport": {
+					"northeast": { "lat": 40.81299032989272, "lng": -73.83620112010726 },
+					"southwest": { "lat": 40.81029067010728, "lng": -73.83890077989271 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+			"icon_background_color": "#4DB546",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+			"name": "Ferry Point Park",
+			"opening_hours": {},
+			"photos": [
+				{
+					"height": 1200,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/115353921696342214704\"\u003eA Google User\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEAGzXNmDzyDUrYyBwr3UpxC5bhWuYLLEv1gsh8H4z24tqOQdLNw1ErbdEm8L9Q5GSPFQKFyvENFFTyl-Ys8dW2S7Ax88qEVYW4drljNYkQ93om1g_FyTHafeG5916YqPQMPlOgUCQGaPPbFD2i_ZRa2_pvupBI8GUwZbQPEt2o_VPJf",
+					"width": 1800
+				}
+			],
+			"place_id": "ChIJyXe8PCiLwokR_2SBQrbo2lM",
+			"plus_code": { "compound_code": "R566+HV Bronx, New York", "global_code": "87G8R566+HV" },
+			"rating": 4.4,
+			"reference": "ChIJyXe8PCiLwokR_2SBQrbo2lM",
+			"types": ["park", "tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 1497
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "Staten Island, NY 10306",
+			"geometry": {
+				"location": { "lat": 40.5795317, "lng": -74.1502007 },
+				"viewport": {
+					"northeast": { "lat": 40.58088152989272, "lng": -74.14885087010728 },
+					"southwest": { "lat": 40.57818187010728, "lng": -74.15155052989273 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Staten Island",
+			"place_id": "ChIJN3VxitdLwokRc1N_5fjfmFw",
+			"plus_code": { "compound_code": "HRHX+RW New York", "global_code": "87G7HRHX+RW" },
+			"rating": 5,
+			"reference": "ChIJN3VxitdLwokRc1N_5fjfmFw",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 2
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "Manhattan, NY 10036",
+			"geometry": {
+				"location": { "lat": 40.7579747, "lng": -73.9855426 },
+				"viewport": {
+					"northeast": { "lat": 40.76099475, "lng": -73.98341435 },
+					"southwest": { "lat": 40.75503854999999, "lng": -73.98768855000002 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#7B9EB0",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Times Square",
+			"opening_hours": {},
+			"photos": [
+				{
+					"height": 4608,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/118370163990905323259\"\u003ekunal bhamre\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uECnI_-4YvBMePe27MCi4u-ztvnKdOQUqxXXlxa_i47W5k_NVaxiM2YbOD8YHSqDmxJ3x_UEyfeMhXqkszj0oiFWabDI1XOlckVN32Fqd_-H-yizI0mIK393hwRe3K3yuJEtDop0CcV5W1XppIEOH9_bd8Em2xgqOJEbpW9OEtFTKwiF",
+					"width": 2080
+				}
+			],
+			"place_id": "ChIJmQJIxlVYwokRLgeuocVOGVU",
+			"plus_code": { "compound_code": "Q257+5Q Manhattan, New York, NY", "global_code": "87G8Q257+5Q" },
+			"rating": 4.7,
+			"reference": "ChIJmQJIxlVYwokRLgeuocVOGVU",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 172706
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "73 Bleecker St, New York, NY 10012",
+			"geometry": {
+				"location": { "lat": 40.7266167, "lng": -73.9956578 },
+				"viewport": {
+					"northeast": { "lat": 40.72790652989273, "lng": -73.99436332010728 },
+					"southwest": { "lat": 40.72520687010728, "lng": -73.99706297989273 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Peter's GB2 Apartment",
+			"place_id": "ChIJC2ffdphZwokRngwDTtUwZy4",
+			"plus_code": { "compound_code": "P2G3+JP New York", "global_code": "87G8P2G3+JP" },
+			"rating": 0,
+			"reference": "ChIJC2ffdphZwokRngwDTtUwZy4",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 0
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "510 E 6th St, New York, NY 10009",
+			"geometry": {
+				"location": { "lat": 40.7248706, "lng": -73.98306920000002 },
+				"viewport": {
+					"northeast": { "lat": 40.72630722989272, "lng": -73.98165572010728 },
+					"southwest": { "lat": 40.72360757010728, "lng": -73.98435537989272 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Chinatown",
+			"photos": [
+				{
+					"height": 3000,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/109176770854118278015\"\u003eZei K\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEDlPEr12bpY1W-RoZsyyfW4PBFRSCEM3UAdiSgrXTu4_zK0GSLNTuAxOUYKb75ZIqNsBXcrhnec50Mi6NwAx5V0dhJw7ReYTDV1sLEpdT3KcPD83i8aGBZUFqX19ge9opMOQzvRXK6ir0cpFt2iEmTgAoyNubdOVkooo4eQ1Hr79zAB",
+					"width": 4000
+				}
+			],
+			"place_id": "ChIJF3MXixlZwokRF__d6OsoCbs",
+			"plus_code": { "compound_code": "P2F8+WQ New York", "global_code": "87G8P2F8+WQ" },
+			"rating": 3.3,
+			"reference": "ChIJF3MXixlZwokRF__d6OsoCbs",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 4
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "Broadway &, Chambers St, New York, NY 10007",
+			"geometry": {
+				"location": { "lat": 40.7124142, "lng": -74.0065164 },
+				"viewport": {
+					"northeast": { "lat": 40.7144807, "lng": -74.00310620000002 },
+					"southwest": { "lat": 40.7109311, "lng": -74.00955779999998 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+			"icon_background_color": "#4DB546",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+			"name": "City Hall Park",
+			"opening_hours": { "open_now": true },
+			"photos": [
+				{
+					"height": 1800,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/105973888964037020586\"\u003eA Google User\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEAWomcIJHukr27scfGzj14ZqSOEM9MkB2e4LKnRFFDnhdBYEICJMqukYoPivqKW5-kX0KggIFiiugdqBGcZgKuRWhdBWOevpaKdaxST3McSoOhIu1fpEw4w5FfU2OETFBZDqDu-O2brto6AZNJBWaFqTBGwasMtX4cN1CjdiUUrTkVN",
+					"width": 2700
+				}
+			],
+			"place_id": "ChIJBxw9mhhawokRJzY2jnlYsZM",
+			"plus_code": { "compound_code": "PX6V+X9 New York", "global_code": "87G7PX6V+X9" },
+			"rating": 4.5,
+			"reference": "ChIJBxw9mhhawokRJzY2jnlYsZM",
+			"types": ["park", "tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 11383
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "New York, NY",
+			"geometry": {
+				"location": { "lat": 40.7812199, "lng": -73.9665138 },
+				"viewport": {
+					"northeast": { "lat": 40.8258336, "lng": -73.93314065 },
+					"southwest": { "lat": 40.74292000000001, "lng": -73.99878324999999 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+			"icon_background_color": "#4DB546",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+			"name": "Central Park",
+			"opening_hours": { "open_now": true },
+			"photos": [
+				{
+					"height": 2948,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/107771078372310507318\"\u003eArik Karagyozyan\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEBU8mqlhL_LkqTuncBSBax39Uux2584ybDM5XfX0_Xejpz29T7N9D91ZV9440tqKY33Mk2RhVyirS9To_bKCUR3tCTiocpejuhD8Bu-D9Jv8mW9uAxn8FBSPTZNMWIjBdFzUXmi5s7KZ2Zs1xxPlUAkHFQSE5yAxbjA8Pu59Nrv_a6C",
+					"width": 4032
+				}
+			],
+			"place_id": "ChIJ4zGFAZpYwokRGUGph3Mf37k",
+			"plus_code": { "compound_code": "Q2JM+F9 New York", "global_code": "87G8Q2JM+F9" },
+			"rating": 4.8,
+			"reference": "ChIJ4zGFAZpYwokRGUGph3Mf37k",
+			"types": ["park", "tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 228387
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "Brooklyn, NY",
+			"geometry": {
+				"location": { "lat": 40.6602037, "lng": -73.9689558 },
+				"viewport": {
+					"northeast": { "lat": 40.68330030000001, "lng": -73.95329260000001 },
+					"southwest": { "lat": 40.64052509999999, "lng": -73.98829219999999 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+			"icon_background_color": "#4DB546",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+			"name": "Prospect Park",
+			"opening_hours": { "open_now": true },
+			"photos": [
+				{
+					"height": 3000,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/108474186536472379678\"\u003eChristie Breedlove\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEBkxPAhx7ULAphruq4wS1lGBXmo7zs6nG5g8Kn8SIMV4Q6RdVLKBmIJM6V8FEbKQEUJEliA7GUKHZE-NhO3JHi1fNT6NoOIB0iP6cFNX_b-06iUFseTiK5cOzj71X3ztjoXizQXce9kulQpvtIUQ0Pad7mOH9wOovlIql_TA3bdvjld",
+					"width": 4000
+				}
+			],
+			"place_id": "ChIJQwRohxBbwokRmHrfAMb3ixc",
+			"plus_code": { "compound_code": "M26J+3C Brooklyn, New York", "global_code": "87G8M26J+3C" },
+			"rating": 4.7,
+			"reference": "ChIJQwRohxBbwokRmHrfAMb3ixc",
+			"types": ["park", "tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 21111
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "24-34 Park Row, New York, NY 10038",
+			"geometry": {
+				"location": { "lat": 40.7118678, "lng": -74.007122 },
+				"viewport": {
+					"northeast": { "lat": 40.71316712989272, "lng": -74.00575172010727 },
+					"southwest": { "lat": 40.71046747010728, "lng": -74.00845137989272 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Big Bus Hop On",
+			"opening_hours": { "open_now": true },
+			"photos": [
+				{
+					"height": 3264,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/107423869103947305233\"\u003eMaria D. Cancel\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uECVpO7kYsUIUi1orHKPO87YazdqslII_PdtkdZm_cxHAI9p-9RoGRlpOfTJncNzrmdcVjem9kl0_PbQKPE0ABUHvysP0FaSvhUVuLX10fO_41_2g_sgkkdh7hC5RubBOTL2oo6dMtcjJbbTJFEbWfGxP2DNgOUzQ-S4rGMqyoul2n1i",
+					"width": 2448
+				}
+			],
+			"place_id": "ChIJa_R2hhhawokRxxZJ9NMlBgY",
+			"plus_code": { "compound_code": "PX6V+P5 New York", "global_code": "87G7PX6V+P5" },
+			"rating": 4.1,
+			"reference": "ChIJa_R2hhhawokRxxZJ9NMlBgY",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 307
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "52 Chambers St, New York, NY 10007",
+			"geometry": {
+				"location": { "lat": 40.7134071, "lng": -74.00552569999999 },
+				"viewport": {
+					"northeast": { "lat": 40.71490522989271, "lng": -74.00405427010728 },
+					"southwest": { "lat": 40.71220557010727, "lng": -74.00675392989271 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#7B9EB0",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "azimiyeh",
+			"place_id": "ChIJKe67GyJawokRV2a_0m93OLA",
+			"rating": 0,
+			"reference": "ChIJKe67GyJawokRV2a_0m93OLA",
+			"types": ["point_of_interest", "establishment"],
+			"user_ratings_total": 0
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "45 E 42nd St, New York, NY 10017",
+			"geometry": {
+				"location": { "lat": 40.752764, "lng": -73.9787461 },
+				"viewport": {
+					"northeast": { "lat": 40.75404642989272, "lng": -73.97744567010727 },
+					"southwest": { "lat": 40.75134677010728, "lng": -73.98014532989272 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Summit Observatory",
+			"opening_hours": {},
+			"photos": [
+				{
+					"height": 3024,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/103910869852183628867\"\u003eBenjamin Bakaitis\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEB__4_BE2bEqJPRYaJiETCnjb1W08Hi6nj-vP7SNFCDXx1oyQOXS-n3aaZu8OHUnajLdx0Lx747_VLLGvxvNvXV6C2tEqkbVrK26UL1tIdrzge_eSYt97vQg-_kAXlzG52xngMb_3S8k8Uox_0b63WtISqteh_DMv9gvLXBzTRj-rK9",
+					"width": 4032
+				}
+			],
+			"place_id": "ChIJuxLe4_JZwokRWNqpfnjbopE",
+			"plus_code": { "compound_code": "Q23C+4G New York", "global_code": "87G8Q23C+4G" },
+			"rating": 4.5,
+			"reference": "ChIJuxLe4_JZwokRWNqpfnjbopE",
+			"types": ["tourist_attraction", "point_of_interest", "establishment"],
+			"user_ratings_total": 22
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "Ace, 2037 West Roscoe, New York, NY 10007",
+			"geometry": {
+				"location": { "lat": 40.7127753, "lng": -74.0059728 },
+				"viewport": {
+					"northeast": { "lat": 40.71397612989271, "lng": -74.00473692010728 },
+					"southwest": { "lat": 40.71127647010727, "lng": -74.00743657989271 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#7B9EB0",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "the hubberd life",
+			"place_id": "ChIJSyX8DCJawokRQiThlYFYcN4",
+			"rating": 0,
+			"reference": "ChIJSyX8DCJawokRQiThlYFYcN4",
+			"types": ["point_of_interest", "establishment"],
+			"user_ratings_total": 0
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "9 Murray Street # 3, New York, NY 10007",
+			"geometry": {
+				"location": { "lat": 40.7136425, "lng": -74.0079468 },
+				"viewport": {
+					"northeast": { "lat": 40.71489362989271, "lng": -74.00664697010728 },
+					"southwest": { "lat": 40.71219397010727, "lng": -74.00934662989273 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#7B9EB0",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "New York Public Interest",
+			"place_id": "ChIJuQSJxxhawokRgcU4m_cUCgE",
+			"plus_code": { "compound_code": "PX7R+FR New York", "global_code": "87G7PX7R+FR" },
+			"rating": 0,
+			"reference": "ChIJuQSJxxhawokRgcU4m_cUCgE",
+			"types": ["point_of_interest", "establishment"],
+			"user_ratings_total": 0
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "11 Wall St, New York, NY 10005",
+			"geometry": {
+				"location": { "lat": 40.706877, "lng": -74.0112654 },
+				"viewport": {
+					"northeast": { "lat": 40.70861642989272, "lng": -74.00939112010727 },
+					"southwest": { "lat": 40.70591677010727, "lng": -74.01209077989272 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#7B9EB0",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "New York Stock Exchange",
+			"opening_hours": { "open_now": false },
+			"photos": [
+				{
+					"height": 3000,
+					"html_attributions": [
+						"\u003ca href=\"https://maps.google.com/maps/contrib/114825920676846604666\"\u003enamratha1\u003c/a\u003e"
+					],
+					"photo_reference": "Aap_uEAdq-y_XH9HeIYWqDtA4Ahfy0g-_jG9kFKVR8qRB7ZHTlhJkknjyRBiK_yKbx4Dk-AzwTsTtGczY8VvT93jTQcicNevBAJh26SzHZujsC91eKYfZR8Af-_oFhC7ywsr2ovFDKJwo00W_mLQQzea5VQ8T_x5jrdJ-9uu8X-5yB9m2SYW",
+					"width": 4000
+				}
+			],
+			"place_id": "ChIJodiAGRZawokRHXCBqdWXV54",
+			"plus_code": { "compound_code": "PX4Q+QF New York", "global_code": "87G7PX4Q+QF" },
+			"rating": 4.3,
+			"reference": "ChIJodiAGRZawokRHXCBqdWXV54",
+			"types": ["tourist_attraction", "finance", "point_of_interest", "establishment"],
+			"user_ratings_total": 1897
+		},
+		{
+			"business_status": "OPERATIONAL",
+			"formatted_address": "15 William St, New York, NY 10005",
+			"geometry": {
+				"location": { "lat": 40.7052538, "lng": -74.0103402 },
+				"viewport": {
+					"northeast": { "lat": 40.70689257989272, "lng": -74.00875812010729 },
+					"southwest": { "lat": 40.70419292010728, "lng": -74.01145777989274 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+			"icon_background_color": "#13B5C7",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Estatua de la Libertad",
+			"place_id": "ChIJ3-gDCzBbwokRvKC84z25pwM",
+			"plus_code": { "compound_code": "PX4Q+4V New York", "global_code": "87G7PX4Q+4V" },
+			"rating": 0,
+			"reference": "ChIJ3-gDCzBbwokRvKC84z25pwM",
+			"types": ["point_of_interest", "establishment"],
+			"user_ratings_total": 0
+		}
+	],
+	"status": "OK"
+}
