@@ -12,10 +12,10 @@ const Main = ({ history }) => {
 		<main className='main'>
 			<Map />
 			<aside className='aside blur'>
-				<Button type='primary' onClick={() => setVisible(true)}>
+				<Button className='button' type='primary' onClick={() => setVisible(true)}>
 					Edit Trip
 				</Button>
-				<div>
+				<div className='timeline'>
 					<Timeline>
 						<Timeline.Item>Starting Date 2021-12-21</Timeline.Item>
 					</Timeline>
@@ -32,7 +32,7 @@ const Main = ({ history }) => {
 			/>
 
 			<Modal
-				title='Modal 1000px width'
+				title='Plan Your Trip Here'
 				centered
 				visible={visible}
 				onOk={() => setVisible(false)}
