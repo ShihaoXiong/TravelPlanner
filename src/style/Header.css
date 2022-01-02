@@ -2,6 +2,9 @@ header.header {
 	padding: 0 10%;
 	height: 64px;
 	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 .logo-container {
@@ -13,5 +16,5 @@ header.header {
 	margin: 0;
 	position: relative;
 	left: -20px;
-	color: #60a5cc;
+	color: var(--primary-color);
 }
