@@ -4,6 +4,9 @@ import Home from './Home';
 import Main from './Main';
 
 function App() {
+	// set the title on the tab
+	document.title = 'TravelPlanner';
+
 	return (
 		<div className='app'>
 			<Router>

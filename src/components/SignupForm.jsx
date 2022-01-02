@@ -74,7 +74,7 @@ class SignupForm extends Component {
 						Sign Up
 					</Button>
 				</Form.Item>
-				<Link to='/' component={Typography.Link}>
+				<Link to='/home/login' component={Typography.Link}>
 					Already have an account? Click here to login
 				</Link>
 			</Form>

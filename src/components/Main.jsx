@@ -3,8 +3,10 @@ import Map from './Map';
 import '../style/Main.css';
 import { Timeline, Modal, Button } from 'antd';
 import Attractions from './Attractions';
+import { HomeOutlined } from '@ant-design/icons';
+import { withRouter } from 'react-router-dom';
 
-const Main = () => {
+const Main = ({ history }) => {
 	const [visible, setVisible] = useState(false);
 	return (
 		<main className='main'>
@@ -20,6 +22,15 @@ const Main = () => {
 				</div>
 			</aside>
 
+			<Button
+				className='btn-home'
+				type='primary'
+				shape='circle'
+				size='large'
+				icon={<HomeOutlined />}
+				onClick={() => history.push('/')}
+			/>
+
 			<Modal
 				title='Modal 1000px width'
 				centered
@@ -34,4 +45,4 @@ const Main = () => {
 	);
 };
 
-export default Main;
+export default withRouter(Main);
