@@ -1,7 +1,7 @@
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import initialData from '../assets/initial-data';
-import Column from './column';
+import Column from './Column';
 
 export default class Attractions extends React.Component {
 	state = initialData;

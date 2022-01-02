@@ -1,0 +1,17 @@
+header.header {
+	padding: 0 10%;
+	height: 64px;
+	align-items: center;
+}
+
+.logo-container {
+	width: 100px;
+	height: 100px;
+}
+
+.header__title {
+	margin: 0;
+	position: relative;
+	left: -20px;
+	color: #60a5cc;
+}
