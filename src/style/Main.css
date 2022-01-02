@@ -17,6 +17,20 @@
 	animation: slide 1s ease-in-out;
 }
 
+.button {
+	display: block;
+	margin: 20px;
+	height: 40px;
+	width: 100px;
+}
+
+.timeline {
+	display: block;
+	margin: 20px;
+	height: calc(100% - 80px);
+	width: 330px;
+}
+
 @keyframes slide {
 	0% {
 		transform: translateX(-100%);
