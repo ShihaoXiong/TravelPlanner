@@ -2,7 +2,7 @@
  * @description The encapsulation for axios
  * @author Shihao Xiong
  */
-import { message } from 'antd';
+import { notification } from 'antd';
 const axios = require('axios');
 
 const METHODS = ['get', 'post', 'put', 'delete'];
@@ -22,7 +22,7 @@ const instance = axios.create(DEFAULT_CONFIG);
 instance.interceptors.response.use(
 	res => (res.status >= 200 || res.status < 300 ? res.data : Promise.reject('Request error, please try again later!')),
 	err => {
-		message.error('Request error, please try again later!');
+		notification.error({ message: 'Error!!!', description: 'Request error, please try again later!' });
 		return Promise.reject(err);
 	}
 );

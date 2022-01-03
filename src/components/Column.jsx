@@ -19,7 +19,12 @@ export default class Column extends React.Component {
 							{...provided.dragHandleProps}
 						>
 							{listData.map((item, index) => (
-								<AttractionCard key={item.id} draggableId={item.id} name={item.name} index={index} />
+								<AttractionCard
+									key={item.attractionID}
+									draggableId={`${item.attractionID}`}
+									name={item.name}
+									index={index}
+								/>
 							))}
 							{provided.placeholder}
 						</div>

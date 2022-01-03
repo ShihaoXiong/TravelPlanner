@@ -5,6 +5,23 @@
 	margin-bottom: 8px;
 	transition: all 0.3s;
 	background-color: var(--primary-lighter);
+	position: relative;
+	overflow: hidden;
+}
+
+.attraction-card__container::after {
+	content: attr(data-index);
+	position: absolute;
+	right: 10px;
+	top: -10px;
+	color: rgba(0, 0, 0, 0.2);
+	font-size: 3em;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.attraction-card__container:hover::after {
+	color: #fff;
 }
 
 .attraction-card__container:hover,

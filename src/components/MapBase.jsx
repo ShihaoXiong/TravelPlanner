@@ -1,4 +1,5 @@
 import React, { Children, isValidElement, cloneElement, useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import '../style/Map.css';
 
 const defaultOptions = {
@@ -8,7 +9,7 @@ const defaultOptions = {
 	fullscreenControl: false
 };
 
-function MapBase({ children }) {
+function MapBase({ children, center }) {
 	const [map, setMap] = useState();
 	const mapRef = useRef();
 
@@ -16,13 +17,13 @@ function MapBase({ children }) {
 		if (mapRef.current && !map) {
 			setMap(
 				new window.google.maps.Map(mapRef.current, {
-					center: { lat: 40.7127281, lng: -74.0060152 },
-					zoom: 10,
+					center,
+					zoom: 13,
 					...defaultOptions
 				})
 			);
 		}
-	}, [mapRef, map]);
+	}, [mapRef, map, center]);
 
 	return (
 		<>
@@ -35,5 +36,9 @@ function MapBase({ children }) {
 		</>
 	);
 }
+
+MapBase.propTypes = {
+	center: PropTypes.object
+};
 
 export default MapBase;

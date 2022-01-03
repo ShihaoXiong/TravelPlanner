@@ -15,6 +15,12 @@
 		11.6px 7.3px 28.1px rgba(0, 0, 0, 0.013), 20.8px 13px 41.2px rgba(0, 0, 0, 0.019),
 		38.9px 24.2px 62.4px rgba(0, 0, 0, 0.035), 93px 58px 123px rgba(0, 0, 0, 0.07);
 	animation: slide 1s ease-in-out;
+	overflow: auto;
+}
+
+.aside .city {
+	color: var(--primary-color);
+	/* font-weight: bold; */
 }
 
 .button {

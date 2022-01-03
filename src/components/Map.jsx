@@ -1,30 +1,24 @@
 import React from 'react';
 import { Wrapper } from '@googlemaps/react-wrapper';
 import { API_KEY } from '../service/constant';
+import { Spin } from 'antd';
+import { useSelector } from 'react-redux';
 import MapBase from './MapBase';
 import MapMarker from './MapMarker';
-import attractions from '../assets/attractions.json';
-import { Spin } from 'antd';
 
 const Loading = () => {
 	return <Spin size='large' />;
 };
 
-const Map = () => {
-	const { results } = attractions;
+const Map = ({ attractions }) => {
+	const { lng, lat } = useSelector(state => state.city);
 
 	return (
 		<Wrapper apiKey={API_KEY} render={Loading}>
-			<MapBase>
-				{/* <MapMarker position={{ lat: 40.7127281, lng: -74.0060152 }} /> */}
-				{results.map(item => {
-					const {
-						geometry: { location },
-						icon: url,
-						name
-					} = item;
-					const icon = { url, scaledSize: { width: 30, height: 30 } };
-					return <MapMarker key={name} icon={icon} position={location} />;
+			<MapBase center={{ lng, lat }}>
+				{attractions.map((item, index) => {
+					const { longitude: lng, latitude: lat, name } = item;
+					return <MapMarker key={name} position={{ lng, lat }} />;
 				})}
 			</MapBase>
 		</Wrapper>

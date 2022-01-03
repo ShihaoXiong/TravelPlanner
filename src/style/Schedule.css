@@ -5,6 +5,15 @@
 	padding: 30px 20px;
 }
 
+.schedule-card.is-selected {
+	background-color: var(--primary-lighter);
+}
+
+.schedule-card .schedule-card__date {
+	color: var(--primary-color);
+	font-style: italic;
+}
+
 .schedule-card + .schedule-card {
 	margin-top: 20px;
 }

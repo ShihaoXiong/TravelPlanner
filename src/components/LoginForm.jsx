@@ -15,10 +15,11 @@ class LoginForm extends Component {
 		this.setState({ loading: true });
 		http
 			.post(`/login?username=${values.username}&password=${values.password}`)
-			.then(res => {
+			.then(() => {
+				this.setState({ loading: false });
 				this.props.history.push('/home/range');
 			})
-			.finally(() => this.setState({ loading: false }));
+			.catch(() => this.setState({ loading: false }));
 	};
 
 	render() {

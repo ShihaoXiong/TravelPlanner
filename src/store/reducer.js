@@ -1,14 +1,14 @@
 const defaultState = {
-	city: null
+	city: null,
+	date: [],
+	planId: '',
+	attractions: null
 };
 
 const reducer = (state = defaultState, action) => {
-	if (action.type === 'setCity') {
-		const newState = JSON.parse(JSON.stringify(state));
-		newState.city = action.value;
-		return newState;
-	}
-	return state;
+	const newState = JSON.parse(JSON.stringify(state));
+	newState[action.type] = action.value;
+	return newState;
 };
 
 export default reducer;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
-import attractions from '../assets/attractions.json'; // CLEAR
 import PropTypes from 'prop-types';
 import { Tabs } from 'antd';
 import '../style/Attractions.css';
@@ -10,21 +9,9 @@ const { TabPane } = Tabs;
 
 export default class Attractions extends React.Component {
 	static propTypes = {
-		plan: PropTypes.object.isRequired
+		plan: PropTypes.object.isRequired,
+		attractions: PropTypes.array
 	};
-	// state = {
-	// 	lis
-	// }
-
-	listData = attractions.results.map((item, index) => {
-		const {
-			geometry: { location },
-			name,
-			rating,
-			types
-		} = item;
-		return { id: index + '', location, name, rating, types };
-	});
 
 	onDragEnd = result => {
 		const { destination, source } = result;
@@ -37,13 +24,13 @@ export default class Attractions extends React.Component {
 		let sourceList;
 		let destinationList;
 		if (source.droppableId === 'attractions') {
-			sourceList = this.listData;
+			sourceList = this.props.attractions;
 		} else {
 			sourceList = visit[source.droppableId].attractions;
 		}
 
 		if (destination.droppableId === 'attractions') {
-			destinationList = this.listData;
+			destinationList = this.props.attractions;
 		} else {
 			destinationList = visit[destination.droppableId].attractions;
 		}
@@ -69,7 +56,7 @@ export default class Attractions extends React.Component {
 					<Column
 						className='column-attractions'
 						title='Attractions'
-						listData={this.listData}
+						listData={this.props.attractions}
 						droppableId='attractions'
 					/>
 				</div>

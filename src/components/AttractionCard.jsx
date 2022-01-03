@@ -13,6 +13,7 @@ export default class AttractionCard extends React.Component {
 						className={`attraction-card__container ${snapshot.isDragging ? 'is-dragging' : ''}`}
 						{...provided.draggableProps}
 						{...provided.dragHandleProps}
+						data-index={index + 1}
 						ref={provided.innerRef}
 					>
 						{name}
