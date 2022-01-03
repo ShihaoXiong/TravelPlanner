@@ -38,13 +38,7 @@ class LoginForm extends Component {
 
 	render() {
 		return (
-			<Form
-				ref={this.formRef}
-				className='form-container blur'
-				name='normal_login'
-				onFinish={this.onFinish}
-				initialValues={this.state.initialValues}
-			>
+			<Form className='form-container blur' name='normal_login' onFinish={this.onFinish}>
 				<Form.Item
 					name='username'
 					rules={[
