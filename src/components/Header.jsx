@@ -1,7 +1,6 @@
 import React, { Component, createRef } from 'react';
 import lottie from 'lottie-web';
 import animationData from '../assets/animation.json';
-import { withRouter } from 'react-router-dom';
 import '../style/Header.css';
 
 class Header extends Component {
@@ -22,13 +21,13 @@ class Header extends Component {
 		});
 	}
 
-	render() {
-		const { history } = this.props;
+	toHome = () => (window.location.href = '/');
 
+	render() {
 		return (
 			<header className='header flex'>
-				<div className='logo-container pointer' ref={this.logoRef} onClick={() => history.push('/')}></div>
-				<h1 className='header__title pointer' onClick={() => history.push('/')}>
+				<div className='logo-container pointer' ref={this.logoRef} onClick={this.toHome}></div>
+				<h1 className='header__title pointer' onClick={this.toHome}>
 					TravelPlanner
 				</h1>
 			</header>
@@ -36,4 +35,4 @@ class Header extends Component {
 	}
 }
 
-export default withRouter(Header);
+export default Header;
