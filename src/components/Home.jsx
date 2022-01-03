@@ -10,10 +10,7 @@ import '../style/Home.css';
 
 const Home = ({ history }) => {
 	const [initOffset, setInitOffset] = useState(0);
-	const upadteOffset = newVal => {
-		console.log(newVal);
-		setInitOffset(newVal);
-	};
+	const upadteOffset = newVal => setInitOffset(newVal);
 
 	return (
 		<div className='home flex'>

@@ -1,37 +1,24 @@
 import React, { Component } from 'react';
-import { Form, Input, Button, message } from 'antd';
+import { Form, Input, Button } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-import { login } from '../utils';
-import '../style/Form.css';
 import { Link } from 'react-router-dom';
 import SwitchLink from './SwitchLink';
+import http from '../service';
+import '../style/Form.css';
+import { withRouter } from 'react-router-dom';
 
 class LoginForm extends Component {
-	state = {
-		loading: false
-	};
+	state = { loading: false };
 
 	onFinish = values => {
 		//set button loading
 		this.setState({ loading: true });
-		login(values)
-			.then(() => {
-				//login successfully
-				//inform users
-				//inform parent component App logged in
-				message.success('Login Successful');
-				this.props.onSuccess();
+		http
+			.post(`/login?username=${values.username}&password=${values.password}`)
+			.then(res => {
+				this.props.history.push('/home/range');
 			})
-			.catch(err => {
-				//login failed
-				//inform users
-				message.error(err.message);
-			})
-			.finally(() => {
-				//always do
-				//set button not loading
-				this.setState({ loading: false });
-			});
+			.finally(() => this.setState({ loading: false }));
 	};
 
 	render() {
@@ -39,8 +26,8 @@ class LoginForm extends Component {
 			<Form
 				className='form-container blur'
 				name='normal_login'
-				initialValues={{ remember: true }}
 				onFinish={this.onFinish}
+				initialValues={{ username: 'ming@outlook.com', password: '12345678' }}
 			>
 				<Form.Item
 					name='username'
@@ -77,4 +64,4 @@ class LoginForm extends Component {
 	}
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);

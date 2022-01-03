@@ -12,6 +12,9 @@ export default class Attractions extends React.Component {
 	static propTypes = {
 		plan: PropTypes.object.isRequired
 	};
+	// state = {
+	// 	lis
+	// }
 
 	listData = attractions.results.map((item, index) => {
 		const {

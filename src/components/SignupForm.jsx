@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Form, Input, message } from 'antd';
+import { Button, Form, Input } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { signup } from '../utils';
 import '../style/Form.css';
 import { Link } from 'react-router-dom';
 import SwitchLink from './SwitchLink';
+import http from '../service';
 
 class SignupForm extends Component {
 	state = {
@@ -23,18 +23,21 @@ class SignupForm extends Component {
 		});
 	};
 
-	onFinish = data => {
+	onFinish = values => {
 		//inform server to register
-		signup(data)
-			.then(() => {
-				message.success(`Successfully signed up`);
-			})
-			.catch(err => {
-				message.error(err.message);
-			})
-			.finally(() => {
-				this.handleCancel();
-			});
+		// signup(data)
+		// 	.then(() => {
+		// 		message.success(`Successfully signed up`);
+		// 	})
+		// 	.catch(err => {
+		// 		message.error(err.message);
+		// 	})
+		// 	.finally(() => {
+		// 		this.handleCancel();
+		// 	});
+		http.post('/signup', values).then(res => {
+			console.log(res);
+		});
 	};
 
 	render() {

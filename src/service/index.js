@@ -2,16 +2,16 @@
  * @description The encapsulation for axios
  * @author Shihao Xiong
  */
-import { notification } from 'antd';
+import { message } from 'antd';
 const axios = require('axios');
 
 const METHODS = ['get', 'post', 'put', 'delete'];
 
 // Global config
 const DEFAULT_CONFIG = {
-	timeout: 15 * 1000
-	//  headers: { 'Content-Type': 'application/json' },
-	//  baseURL: BASE_URL
+	timeout: 15 * 1000,
+	// headers: { 'Content-Type': 'application/json' },
+	withCredentials: true
 };
 
 const instance = axios.create(DEFAULT_CONFIG);
@@ -22,7 +22,7 @@ const instance = axios.create(DEFAULT_CONFIG);
 instance.interceptors.response.use(
 	res => (res.status >= 200 || res.status < 300 ? res.data : Promise.reject('Request error, please try again later!')),
 	err => {
-		notification.error('Request error, please try again later!');
+		message.error('Request error, please try again later!');
 		return Promise.reject(err);
 	}
 );

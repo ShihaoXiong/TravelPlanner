@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Select, Tabs, DatePicker, Button } from 'antd';
 import '../style/Range.css';
 import { BankTwoTone, CalendarTwoTone, SearchOutlined } from '@ant-design/icons';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import http from '../service';
+import { withRouter } from 'react-router-dom';
 
 const { TabPane } = Tabs;
 const { Option } = Select;
 const { RangePicker } = DatePicker;
 
-const Selection = () => {
-	const [citys, setCitys] = useState([]);
+const Selection = withRouter(({ history }) => {
+	const [cities, setCities] = useState([]);
+	const dispatch = useDispatch();
+
+	const getCityData = () => {
+		http.get('/cities').then(res => {
+			const data = res.map(item => {
+				const [id, name, state, lat, lon] = item;
+				return { id, name, state, lat, lon };
+			});
+			setCities(data);
+		});
+	};
+
+	useEffect(() => getCityData(), []);
+
+	const handleSelectCity = value => {
+		dispatch({ type: 'setCity', value: { id: value.key, name: value.label } });
+	};
 
 	return (
 		<div className='selection-container flex'>
@@ -20,12 +40,14 @@ const Selection = () => {
 				</div>
 				<Select
 					size='large'
+					labelInValue
 					className='selection-item__select'
 					style={{ width: '100%', backgroundColor: 'transparent' }}
 					placeholder='Where do you want to go?'
+					onChange={handleSelectCity}
 				>
-					{citys.map(item => (
-						<Option>{item}</Option>
+					{cities.map(item => (
+						<Option key={item.id}>{item.name}</Option>
 					))}
 				</Select>
 			</div>
@@ -38,10 +60,17 @@ const Selection = () => {
 				<RangePicker style={{ width: '100%' }} size='large' format='MM/DD/YYYY' />
 			</div>
 
-			<Button style={{ marginLeft: 'auto' }} type='primary' size='large' shape='circle' icon={<SearchOutlined />} />
+			<Button
+				style={{ marginLeft: 'auto' }}
+				type='primary'
+				size='large'
+				shape='circle'
+				icon={<SearchOutlined />}
+				onClick={() => history.push('/main')}
+			/>
 		</div>
 	);
-};
+});
 
 const Range = () => {
 	return (
