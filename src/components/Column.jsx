@@ -1,32 +1,28 @@
 import React from 'react';
 import { Droppable } from 'react-beautiful-dnd';
-import Task from './ListAttraction';
+import AttractionCard from './AttractionCard';
 import '../style/Column.css';
-
-class TaskList extends React.Component {
-	render() {
-		const { children, innerRef, provided } = this.props;
-		return (
-			<div className='column__task-list' {...provided.draggableProps} {...provided.dragHandleProps} ref={innerRef}>
-				{children}
-			</div>
-		);
-	}
-}
 
 export default class Column extends React.Component {
 	render() {
+		const { title, listData, droppableId, className } = this.props;
+
 		return (
-			<div className='column__container'>
-				<h3 className='column__title'>{this.props.column.title}</h3>
-				<Droppable droppableId={this.props.column.id}>
+			<div className={`column__container flex ${className ?? ''}`}>
+				{title && <h3 className='column__title'>{title}</h3>}
+				<Droppable droppableId={droppableId}>
 					{provided => (
-						<TaskList innerRef={provided.innerRef} provided={provided}>
-							{this.props.tasks.map((task, index) => (
-								<Task key={task.id} task={task} index={index} />
+						<div
+							className='column__attractions'
+							ref={provided.innerRef}
+							{...provided.draggableProps}
+							{...provided.dragHandleProps}
+						>
+							{listData.map((item, index) => (
+								<AttractionCard key={item.id} draggableId={item.id} name={item.name} index={index} />
 							))}
 							{provided.placeholder}
-						</TaskList>
+						</div>
 					)}
 				</Droppable>
 			</div>

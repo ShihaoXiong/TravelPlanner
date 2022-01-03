@@ -1,0 +1,10 @@
+.schedule-card {
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+	padding: 30px 20px;
+}
+
+.schedule-card + .schedule-card {
+	margin-top: 20px;
+}

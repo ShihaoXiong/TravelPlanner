@@ -1,20 +1,12 @@
 .column__container {
-	margin: 8px;
-	border: 1px solid lightgrey;
 	border-radius: 2px;
-	width: 220px;
-
-	display: flex;
+	width: 100%;
 	flex-direction: column;
 }
 
-.column__title {
-	padding: 8px;
-}
-
-.column__task-list {
-	padding: 8px;
+.column__attractions {
 	transition: background-color 0.2s ease;
 	flex-grow: 1;
-	min-height: 100px;
+	height: 40vh;
+	overflow: auto;
 }

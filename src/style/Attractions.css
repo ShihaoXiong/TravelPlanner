@@ -1,0 +1,13 @@
+.attractions-box {
+	justify-content: space-between;
+}
+
+.attractions-box .tabs {
+	width: 49%;
+}
+
+.attractions-box .column-attractions {
+	border-radius: 10px;
+	width: 49%;
+	padding: 20px 0;
+}

@@ -1,26 +1,22 @@
 import React from 'react';
-import '../style/ListAttraction.css';
+import '../style/AttractionCard.css';
 import { Draggable } from 'react-beautiful-dnd';
 
-class Container extends React.Component {
+export default class AttractionCard extends React.Component {
 	render() {
-		const { children, innerRef, provided } = this.props;
-		return (
-			<div className='list__container' {...provided.draggableProps} {...provided.dragHandleProps} ref={innerRef}>
-				{children}
-			</div>
-		);
-	}
-}
+		const { draggableId, index, name } = this.props;
 
-export default class Task extends React.Component {
-	render() {
 		return (
-			<Draggable draggableId={this.props.task.id} index={this.props.index}>
+			<Draggable draggableId={draggableId} index={index}>
 				{(provided, snapshot) => (
-					<Container provided={provided} innerRef={provided.innerRef} isDragging={snapshot.isDragging}>
-						{this.props.task.content}
-					</Container>
+					<div
+						className={`attraction-card__container ${snapshot.isDragging ? 'is-dragging' : ''}`}
+						{...provided.draggableProps}
+						{...provided.dragHandleProps}
+						ref={provided.innerRef}
+					>
+						{name}
+					</div>
 				)}
 			</Draggable>
 		);

@@ -1,6 +1,16 @@
-.list__container {
-	border: 1px solid lightgrey;
-	border-radius: 2px;
+.attraction-card__container {
+	border: 1px solid transparent;
+	border-radius: 8px;
 	padding: 8px;
 	margin-bottom: 8px;
+	transition: all 0.3s;
+	background-color: var(--primary-lighter);
+}
+
+.attraction-card__container:hover,
+.attraction-card__container.is-dragging {
+	background-color: var(--primary-color);
+	color: #fff;
+	border: 1px solid transparent;
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
