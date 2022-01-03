@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Form, Input, message, Typography } from 'antd';
+import { Button, Form, Input, message } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { signup } from '../utils';
 import '../style/Form.css';
 import { Link } from 'react-router-dom';
+import SwitchLink from './SwitchLink';
 
 class SignupForm extends Component {
 	state = {
@@ -74,7 +75,7 @@ class SignupForm extends Component {
 						Sign Up
 					</Button>
 				</Form.Item>
-				<Link to='/home/login' component={Typography.Link}>
+				<Link to='/home/login' component={SwitchLink}>
 					Already have an account? Click here to login
 				</Link>
 			</Form>

@@ -1,0 +1,8 @@
+.switch-link {
+	color: var(--primary-color);
+	font-size: 14px;
+}
+
+.switch-link:hover {
+	text-decoration: underline;
+}

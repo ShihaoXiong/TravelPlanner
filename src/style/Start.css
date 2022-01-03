@@ -6,6 +6,10 @@
 	user-select: none;
 }
 
+.start.init:hover {
+	transform: scale(1.2);
+}
+
 .start__text {
 	margin: 0;
 	color: #fff;
@@ -26,24 +30,26 @@
 	clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
 }
 
-.start:hover .start__text.up {
-	top: -50px;
+.start:hover .start__text.up.init {
+	top: -50px !important;
 	opacity: 0.7;
 	color: var(--primary-color);
 }
 
-.start:hover .start__text.down {
-	top: 50px;
+.start:hover .start__text.down.init {
+	top: 50px !important;
 	opacity: 0.7;
 	color: var(--primary-color);
 }
 
-.start__btn {
+.start__children {
 	position: absolute;
-	opacity: 0;
 	transform: opacity 0.5s;
 }
+.start__children.init {
+	opacity: 0;
+}
 
-.start:hover .start__btn {
+.start:hover .start__children {
 	opacity: 1;
 }

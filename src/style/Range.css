@@ -1,0 +1,40 @@
+.range-container {
+	border-radius: 12px;
+	padding: 30px 40px;
+	align-items: center;
+	justify-content: space-between;
+	width: 50vw;
+	box-shadow: 2.6px 1.6px 9.6px rgba(0, 0, 0, 0.012), 6.2px 3.9px 18.3px rgba(0, 0, 0, 0.012),
+		11.6px 7.3px 28.1px rgba(0, 0, 0, 0.013), 20.8px 13px 41.2px rgba(0, 0, 0, 0.019),
+		38.9px 24.2px 62.4px rgba(0, 0, 0, 0.035), 93px 58px 123px rgba(0, 0, 0, 0.07);
+}
+
+.range-container .tabs {
+	width: 100%;
+}
+
+.selection-container {
+	width: 100%;
+	align-items: center;
+}
+
+.selection-item > .selection-item__title {
+	align-items: center;
+}
+
+.selection-item {
+	width: 25%;
+}
+
+.selection-item + .selection-item {
+	margin-left: 5%;
+}
+
+.selection-item__title > h2 {
+	margin-bottom: 0;
+	margin-left: 10px;
+}
+
+/* .selection-item__select .ant-select-selector {
+	background-color: transparent !important;
+} */

@@ -15,10 +15,6 @@
 	transition: all 0.5s;
 }
 
-.home .start:hover {
-	transform: scale(1.2);
-}
-
 .home .start:hover ~ .bg {
 	filter: blur(10px);
 }
