@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Schedule from './Schedule';
 import http from '../service';
 
-const Main = ({ history }) => {
+const Main = ({ history, setIsLoginIn }) => {
 	const city = useSelector(state => state.city);
 	const planId = useSelector(state => state.planId);
 	const [attractions, setAttractions] = useState([]);
@@ -21,7 +21,7 @@ const Main = ({ history }) => {
 		(async () => {
 			await http.get(`/city/${city.id}`).then(res => {
 				setAttractions(res);
-				setCopyAttractions(res);
+				setCopyAttractions(JSON.parse(JSON.stringify(res)));
 				setMarkerData(res);
 				dispatch({ type: 'attractions', value: res });
 			});
@@ -41,6 +41,12 @@ const Main = ({ history }) => {
 		setMarkerData(copyAttractions);
 	};
 
+	const handleLogout = () => {
+		sessionStorage.clear();
+		setIsLoginIn(false);
+		history.push('/');
+	};
+
 	return (
 		<main className='main'>
 			<Map attractions={markerData} />
@@ -50,6 +56,7 @@ const Main = ({ history }) => {
 					attractions={attractions}
 					planData={planData}
 					getVisitPlan={getVisitPlan}
+					setPlanData={setPlanData}
 					setMarkerData={setMarkerData}
 					resetMarker={resetMarker}
 				/>
@@ -61,7 +68,7 @@ const Main = ({ history }) => {
 				shape='circle'
 				size='large'
 				icon={<HomeOutlined />}
-				onClick={() => history.push('/')}
+				onClick={handleLogout}
 			/>
 		</main>
 	);

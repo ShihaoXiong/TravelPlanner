@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import { Form, Input, Button } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
@@ -8,7 +8,11 @@ import '../style/Form.css';
 import { withRouter } from 'react-router-dom';
 
 class LoginForm extends Component {
-	state = { loading: false };
+	constructor() {
+		super();
+		this.formRef = createRef();
+	}
+	state = { loading: false, initialValues: { username: 'ming@outlook.com', password: '12345678' } };
 
 	onFinish = values => {
 		//set button loading
@@ -17,18 +21,29 @@ class LoginForm extends Component {
 			.post(`/login?username=${values.username}&password=${values.password}`)
 			.then(() => {
 				this.setState({ loading: false });
+				sessionStorage.setItem('login', true);
+				this.props.setIsLoginIn(true);
 				this.props.history.push('/home/range');
 			})
 			.catch(() => this.setState({ loading: false }));
 	};
 
+	componentDidMount() {
+		console.log(this.props.location.query);
+		if (this.props.location.query) {
+			const { current } = this.formRef;
+			current.setFieldsValue(this.props.location.query);
+		}
+	}
+
 	render() {
 		return (
 			<Form
+				ref={this.formRef}
 				className='form-container blur'
 				name='normal_login'
 				onFinish={this.onFinish}
-				initialValues={{ username: 'ming@outlook.com', password: '12345678' }}
+				initialValues={this.state.initialValues}
 			>
 				<Form.Item
 					name='username'

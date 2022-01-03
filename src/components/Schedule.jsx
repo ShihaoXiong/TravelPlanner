@@ -7,7 +7,7 @@ import http from '../service';
 
 const ScheduleCard = ({ scheduleData, date, onClick, className }) => {
 	return (
-		<div className={`schedule-card ${className}`} onClick={onClick}>
+		<div className={`schedule-card pointer ${className}`} onClick={onClick}>
 			<h3 className='schedule-card__date'>{date}</h3>
 			{scheduleData.length ? (
 				<Timeline>
@@ -62,7 +62,7 @@ class Plan {
 	}
 }
 
-const Schedule = ({ attractions, planData, getVisitPlan, setMarkerData, resetMarker }) => {
+const Schedule = ({ attractions, planData, getVisitPlan, setPlanData, setMarkerData, resetMarker }) => {
 	const [visible, setVisible] = useState(false);
 	const date = useSelector(state => state.date);
 	const [plan, setPlan] = useState(new Plan({ visitPlanId: null }, date));
@@ -81,7 +81,19 @@ const Schedule = ({ attractions, planData, getVisitPlan, setMarkerData, resetMar
 			.post('/saveVisitPlan', plan.decodePlan())
 			.then(() => {
 				notification.success({ message: 'Saved Succeffully!' });
-				getVisitPlan();
+				// await getVisitPlan();
+			})
+			.then(() => {
+				const requests = date.map(item => http.get(`/shuffleVisitPlan/${plan.id}/${item}`));
+				Promise.all(requests)
+					.then(res => {
+						const planData = res.reduce((pre, cur) => {
+							pre.push(...cur);
+							return pre;
+						}, []);
+						setPlanData({ visitPlanId: plan.id, visitItemList: planData });
+					})
+					.catch(() => getVisitPlan());
 			})
 			.finally(() => {
 				setLoading(false);

@@ -9,7 +9,6 @@ const METHODS = ['get', 'post', 'put', 'delete'];
 
 // Global config
 const DEFAULT_CONFIG = {
-	timeout: 15 * 1000,
 	// headers: { 'Content-Type': 'application/json' },
 	withCredentials: true
 };

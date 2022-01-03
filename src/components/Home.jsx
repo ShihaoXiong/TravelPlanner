@@ -7,8 +7,9 @@ import Range from './Range';
 import Header from './Header';
 import Start from './Start';
 import '../style/Home.css';
+import { Redirect } from 'react-router-dom';
 
-const Home = ({ history }) => {
+const Home = ({ history, isLoginIn, setIsLoginIn }) => {
 	const [initOffset, setInitOffset] = useState(0);
 	const upadteOffset = newVal => setInitOffset(newVal);
 
@@ -25,9 +26,9 @@ const Home = ({ history }) => {
 						</Button>
 					)}
 				/>
-				<Route path='/home/login' render={() => <LoginForm />} />
+				<Route path='/home/login' render={() => <LoginForm setIsLoginIn={setIsLoginIn} />} />
 				<Route path='/home/signup' render={() => <SignupForm />} />
-				<Route path='/home/range' render={() => <Range />} />
+				<Route path='/home/range' render={() => (isLoginIn ? <Range /> : <Redirect to='/home/login' />)} />
 			</Start>
 
 			{/* {Routes.map(item => (
