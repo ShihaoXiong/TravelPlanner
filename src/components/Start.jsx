@@ -15,7 +15,7 @@ const Start = ({ children, initOffset, upadteOffset }) => {
 			setOffset(newVal);
 			upadteOffset(newVal);
 		}
-	}, [childrenRef.current?.offsetHeight, upadteOffset]);
+	}, [childrenRef, upadteOffset]);
 
 	return (
 		<div className={`start flex ${className}`}>

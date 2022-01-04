@@ -29,7 +29,6 @@ class LoginForm extends Component {
 	};
 
 	componentDidMount() {
-		console.log(this.props.location.query);
 		if (this.props.location.query) {
 			const { current } = this.formRef;
 			current.setFieldsValue(this.props.location.query);
@@ -38,7 +37,7 @@ class LoginForm extends Component {
 
 	render() {
 		return (
-			<Form className='form-container blur' name='normal_login' onFinish={this.onFinish}>
+			<Form ref={this.formRef} className='form-container blur' name='normal_login' onFinish={this.onFinish}>
 				<Form.Item
 					name='username'
 					rules={[

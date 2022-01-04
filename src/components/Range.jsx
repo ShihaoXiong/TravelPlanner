@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { Select, Tabs, DatePicker, Button, notification } from 'antd';
+import { Select, Tabs, DatePicker, Button, notification, Spin } from 'antd';
 import { BankTwoTone, CalendarTwoTone, SearchOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { DATE_FORMAT } from '../service/constant';
+import { Plan } from './Schedule';
 import dayjs from 'dayjs';
 import http from '../service';
 import '../style/Range.css';
@@ -12,6 +13,8 @@ import '../style/Range.css';
 const { TabPane } = Tabs;
 const { Option } = Select;
 const { RangePicker } = DatePicker;
+
+const cityMap = new Map();
 
 const Selection = withRouter(({ history }) => {
 	const [cities, setCities] = useState([]);
@@ -23,6 +26,7 @@ const Selection = withRouter(({ history }) => {
 		http.get('/cities').then(res => {
 			const data = res.map(item => {
 				const [id, name, state, lat, lng] = item;
+				cityMap.set(name, { lat: +lat, lng: +lng, id, name });
 				return { id, name, state, lat, lng };
 			});
 			setCities(data);
@@ -55,7 +59,7 @@ const Selection = withRouter(({ history }) => {
 		}
 
 		// create visit plan
-		http.get('/createVisitPlan').then(res => {
+		http.get(`/createVisitPlan/${city.name}`).then(res => {
 			dispatch({ type: 'planId', value: res.visitPlanId });
 			history.push('/main');
 		});
@@ -104,14 +108,70 @@ const Selection = withRouter(({ history }) => {
 	);
 });
 
+const PlanCard = withRouter(({ planDate, history }) => {
+	const dispatch = useDispatch();
+
+	const handelPlanSelect = (id, city, date) => {
+		dispatch({ type: 'planId', value: id });
+		const cityInfo = cityMap.get(city);
+		dispatch({ type: 'city', value: cityInfo });
+		dispatch({ type: 'date', value: date });
+
+		history.push('/main');
+	};
+
+	return (
+		<div
+			className='plan-card pointer'
+			onClick={() => handelPlanSelect(planDate.id, planDate.city, planDate.date)}
+			data-city={planDate.city}
+		>
+			<div>
+				<span>From</span> {planDate.date[0]}
+			</div>
+			<div>
+				<span>To</span> {planDate.date.at(-1)}
+			</div>
+		</div>
+	);
+});
+
 const Range = () => {
+	const [planList, setPlanList] = useState([]);
+	const [loading, setLoading] = useState(false);
+
+	const handleTabClick = key => {
+		if (key === '2') {
+			setLoading(true);
+			http
+				.get('/visitPlans')
+				.then(res => {
+					const listData = res.map(item => {
+						const plan = new Plan(item);
+						return { date: plan.getDate(), id: plan.id, city: item.city };
+					});
+
+					setPlanList(listData);
+				})
+				.finally(() => setLoading(false));
+		}
+	};
+
 	return (
 		<div className='range-container blur flex'>
-			<Tabs className='tabs' defaultActiveKey='1'>
+			<Tabs className='tabs' defaultActiveKey='1' onTabClick={handleTabClick}>
 				<TabPane tab='New Plan' key='1'>
 					<Selection />
 				</TabPane>
-				<TabPane tab='Saved Plan' key='2'></TabPane>
+				<TabPane tab='Saved Plan' key='2'>
+					<Spin spinning={loading}>
+						<div className='saved-plan-container flex'>
+							{planList.map((item, index) => (
+								<PlanCard key={index} planDate={item} />
+							))}
+						</div>
+					</Spin>
+				</TabPane>
 			</Tabs>
 		</div>
 	);

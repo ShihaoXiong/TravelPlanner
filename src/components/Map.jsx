@@ -16,9 +16,9 @@ const Map = ({ attractions }) => {
 	return (
 		<Wrapper apiKey={API_KEY} render={Loading}>
 			<MapBase center={{ lng, lat }}>
-				{attractions.map((item, index) => {
-					const { longitude: lng, latitude: lat, name } = item;
-					return <MapMarker key={name} position={{ lng, lat }} />;
+				{attractions.map(item => {
+					const { longitude: lng, latitude: lat, name, imageUrl } = item;
+					return <MapMarker key={name} name={name} imageUrl={imageUrl} position={{ lng, lat }} />;
 				})}
 			</MapBase>
 		</Wrapper>

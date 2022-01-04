@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const MapMarker = options => {
+const MapMarker = ({ name, imageUrl, ...options }) => {
 	const [marker, setMarker] = useState();
 
 	useEffect(() => {

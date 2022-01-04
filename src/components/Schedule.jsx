@@ -22,7 +22,7 @@ const ScheduleCard = ({ scheduleData, date, onClick, className }) => {
 	);
 };
 
-class Plan {
+export class Plan {
 	constructor({ visitPlanId, visitItemList }, date) {
 		this.id = visitPlanId;
 
@@ -60,6 +60,10 @@ class Plan {
 
 		return resPlan;
 	}
+
+	getDate() {
+		return this.visit.map(item => item.date);
+	}
 }
 
 const Schedule = ({ attractions, planData, getVisitPlan, setPlanData, setMarkerData, resetMarker }) => {
@@ -75,7 +79,7 @@ const Schedule = ({ attractions, planData, getVisitPlan, setPlanData, setMarkerD
 		setCopyPlan(JSON.parse(JSON.stringify(plan)));
 	};
 
-	const handelComfirm = () => {
+	const handelConfirm = () => {
 		setLoading(true);
 		http
 			.post('/saveVisitPlan', plan.decodePlan())
@@ -87,8 +91,13 @@ const Schedule = ({ attractions, planData, getVisitPlan, setPlanData, setMarkerD
 				const requests = date.map(item => http.get(`/shuffleVisitPlan/${plan.id}/${item}`));
 				Promise.all(requests)
 					.then(res => {
-						const planData = res.reduce((pre, cur) => {
-							pre.push(...cur);
+						const planData = res.reduce((pre, cur, index) => {
+							cur.length
+								? pre.push(...cur)
+								: pre.push({
+										date: date[index],
+										attraction: null
+								  });
 							return pre;
 						}, []);
 						setPlanData({ visitPlanId: plan.id, visitItemList: planData });
@@ -146,7 +155,7 @@ const Schedule = ({ attractions, planData, getVisitPlan, setPlanData, setMarkerD
 				title='Plan Your Trip Here'
 				centered
 				visible={visible}
-				onOk={handelComfirm}
+				onOk={handelConfirm}
 				onCancel={handleCancel}
 				width={1000}
 			>

@@ -16,6 +16,7 @@
 .selection-container {
 	width: 100%;
 	align-items: center;
+	min-height: 84px;
 }
 
 .selection-item > .selection-item__title {
@@ -35,6 +36,44 @@
 	margin-left: 10px;
 }
 
-/* .selection-item__select .ant-select-selector {
-	background-color: transparent !important;
-} */
+.saved-plan-container {
+	flex-flow: row nowrap;
+	overflow-x: auto;
+	min-height: 84px;
+}
+
+.plan-card {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+	line-height: 3em;
+	padding: 0 15px;
+	transition: all 0.5s;
+	position: relative;
+	overflow: hidden;
+}
+
+.plan-card::after {
+	content: attr(data-city);
+	font-size: 2.5em;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-style: italic;
+	white-space: nowrap;
+}
+
+.plan-card:hover {
+	background-color: var(--primary-lighter);
+}
+
+.plan-card + .plan-card {
+	margin-left: 20px;
+}
+
+.plan-card span {
+	color: var(--primary-color);
+	font-weight: bold;
+}

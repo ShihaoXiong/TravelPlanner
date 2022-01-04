@@ -41,6 +41,12 @@
 
 .btn-home {
 	position: fixed;
+	bottom: 80px;
+	right: 20px;
+}
+
+.btn-logout {
+	position: fixed;
 	bottom: 20px;
 	right: 20px;
 }
